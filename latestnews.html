@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div style="background-image: url({%static 'images/background.jpg'  %}); background-size: cover;">
+    <div style="background:rgba(0, 0, 0, 0.75)"
+    <div class="row  text-light p-5 " >
+<div class="container ps-5 pe-5">
+    <div class="row">
+        {% for i in K %}
+
+
+        <div class="col-md-4" data-aos="fade-right">
+            <div class="card mt-4 border shadow">
+                <img src="{{i.urlToImage}}" alt="" height="280px" width="100px" class=" card-img-top">
+                <div class="card-body border shadow">
+                    <h5 class="card-title"title="{{i.title}}" style="color: #4a28a9;">
+                    {{i.title|truncatechars:30}}</h5>
+                    <p class="card-text">{{i.content|truncatechars:150}}</p>
+                    <a href="{{i.url}}" class="button"><b> click here </b></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div> 
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends 'sidebar.html' %}
+{% load static %}
+{% block content%}
+
+<html>
+    <head>
+        <title>ethrium analysis </title>
+        <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{%static 'icofont/icofont.min.css ' %}" rel="stylesheet">
+    </head>
+
+    <body>
+      <center>
+      <h1 class="mt-2 p-2">Ethrium</h1>
+    </center>
+      
+        <!-- <div style="background-image: url({%static 'images/background.jpg'  %}); background-size: cover;">
+            <div style="background:rgba(0, 0, 0, 0.75)"
+            <div class="row  text-light p-5 " > -->
+        <center>
+            <!-- <h1 class="mt-2 p-2">Ethrium</h1> -->
+        <div clas="container">
+            <div class="row">
+                <div class="col-4 ">
+                    <div class="card h-100" style="width: 18rem;">
+                        <img src= {%static "images/2.jpg" %} class="card-img-top" height=100% width=100% >
+                        <div class="card-body">
+                          <h5 class="card-title">ethrium open price</h5>
+                           
+                           <a href="{% url 'ethriumopenprice' %}" class="btn btn-primary">View Analysis</a> 
+                        </div>
+                      </div>
+
+
+                </div>
+
+
+                <div class="col-4 ">
+                    <div class="card  h-100" style="width: 18rem;">
+                        <img src= {%static "images/yii.png" %}   class="card-img-top" alt="..." height=100% width=100%>
+                        <div class="card-body">
+                          <h5 class="card-title">ethrium low price</h5>
+                      
+                          <a href="{% url 'ethriumlowprice' %}" class="btn btn-primary">View Analysis</a> 
+                        </div>
+                      </div>
+                </div>
+
+<div class="col-4 ">
+
+    <div class="card  h-100" style="width: 18rem;">
+        <img src= {%static "images/copy.png" %}  class="card-img-top" alt="..." height=100% width=100%>
+        <div class="card-body">
+          <h5 class="card-title">ethrium close price</h5>
+         
+         
+       <a href="{% url 'ethriumcloseprice' %}" class="btn btn-primary">View Analysis</a> 
+        </div>
+      </div>
+</div>
+
+
+
+
+            </div>
+         </div>           
+
+
+</center>
+<center>
+    <div clas="container">
+        <div class="row">
+            <div class="col-6 mt-5 p-4">
+                <div class="card  h-100" style="width: 18rem;">
+                    <img src= {%static "images/img.jpeg" %} class="card-img-top" height=100% width=100% >
+                    <div class="card-body">
+                      <h5 class="card-title">ethriumAdj.close price</h5>
+                       
+                       <a href="{% url 'ethriumadjprice' %}" class="btn btn-primary">View Analysis</a> 
+                    </div>
+                  </div>
+
+
+            </div>
+
+
+            <div class="col-3 mt-5 p-4">
+                <div class="card  h-100" style="width: 18rem;">
+                    <img src= {%static "images/si.png" %}   class="card-img-top" alt="..." height=100% width=100%>
+                    <div class="card-body">
+                      <h5 class="card-title ">ethrium Volume</h5>
+                  
+                      <a href="{% url 'ethriumvolume' %}" class="btn btn-primary">View Analysis</a> 
+                    </div>
+                  </div>
+            </div>
+        
+
+
+
+
+
+
+        </div></div>
+    </div>
+   
+     </center> 
+  </body>
+</div> 
+  </html>
+
+
+
+
+
+
+
+{% endblock %}

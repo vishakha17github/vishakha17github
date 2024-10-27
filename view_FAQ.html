@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+
+
+<div style="background-image: url({%static 'images/background.jpg'  %}); background-size: cover;">
+  <div style="background:rgba(0, 0, 0, 0.75)"
+  <div class="row  text-dark p-5 " >
+  
+
+
+
+
+<div class="container">
+    <div class="row"> 
+        <div class="col-md-12">
+              {% for i in data %}
+              <!-- <details class="border p-2 mt-3 shadow bg-light rounded">
+                <summary class="text-warning fs-4">{{i.ques}}</summary>
+                <p class= "border-top p-3">{{i.ans}}</p> -->
+
+                <details class="border p-2 mt-3 shadow  rounded">
+                  <summary class="text-warning fs-4">{{i.ques}}</summary>
+                  <p class= "border-top p-3 text-primary">{{i.ans}}</p>
+  
+
+
+
+
+              </details>
+              {% endfor %} 
+        </div>
+    </div>
+</div>
+
+<!-- {% for i in data %}
+<h3>{{i.ques}}</h3>
+<p>{{i.ans}}</p>
+{% endfor %} -->
+
+{% endblock %}

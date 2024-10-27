@@ -1,0 +1,73 @@
+{% extends 'sidebar.html' %}
+{% block content%}
+
+<!doctype html>
+<html>
+
+<head>
+
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4 text-light">
+
+        <form method="POST" action="">
+         
+          {% csrf_token %}
+          <p>{{succ}}</p>
+       
+          <center>
+
+            <h1 class="mb-4 mt-5 text-center">analyse the price of month of years</h1>
+            <hr>
+            <input type="text" name="year" placeholder="particular year " class="mb-1 form-control"><br>
+
+            <br>
+           
+<!-- <label for="month">month</label> -->
+
+<select name="month" id="month" class="mb-1 form-control">
+ <option hidden> --select--</option>
+    <option value="jan">january</option>
+    <option value="jan">feburary</option>
+    <option value="jan">march</option>
+    <option value="jan">april</option>
+    <option value="jan">may</option>
+    <option value="jan">june</option>
+    <option value="jan">july</option>
+    <option value="jan">august</option>
+    <option value="jan">september</option>
+    <option value="jan">october</option>
+    <option value="jan">november</option>
+    <option value="jan">december</option>
+</select>
+
+
+            
+          </center>
+<br>
+<br>
+
+          <center><button class="text-center btn btn-warning rounded" style="">analyze</button></center>
+       
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+</body>
+
+</html>
+
+
+{% endblock %}

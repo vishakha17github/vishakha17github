@@ -1,0 +1,88 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<html>
+    <head>
+        <title>login page</title>
+        <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{%static 'icofont/icofont.min.css ' %}" rel="stylesheet">
+    </head>
+    <!-- <body background="background.jpg">  -->
+<body >
+
+
+
+  <div style="background-image: url({%static 'images/background.jpg'  %}); background-size: cover;">
+    <div style="background:rgba(0, 0, 0, 0.75)"
+     <div class="row  text-light p-5 " >
+      <!-- <div class="row bg-dark text-light p-5"> -->
+    
+        <div class="container">
+        <div class="row  pt-5 pb-5" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+            <div class="col-1"></div>
+            <div class="col-5 ">
+               
+                <img src= {%static 'images/cryptobg.png' %} width="100%" height="90%">
+            </div>
+            <!-- <div class="col-5 p-5 bg-dark text-bg-dark"> -->
+ <div class="col-5 p-5"  data-aos="fade-left"
+ data-aos-anchor="#example-anchor"
+ data-aos-offset="500"
+ data-aos-duration="500">
+ 
+ <form method="POST" action="">
+  {% csrf_token %}
+  <p>{{msg}}</p>
+
+   <!-- <i class="icofont-email icofont-2x bg-primary  p-2 rounded-pill" style="position: absolute; margin-top: -65px; margin-left: 120px;" ></i> -->
+ <br>
+ <br>
+ <br>
+ <center>
+ 
+<h2 >LOGIN HERE!!</h2>
+ </center>
+ <hr/>
+ 
+
+
+ 
+  <div class="input-group mb-3">
+    <!-- <span class="input-group-text" id="basic-addon1"><i class="icofont-ui-email"></i></span> -->
+    <!-- this beloww code " aria-describedby="basic-addon -->
+    <input type="text" name="em" class="form-control rounded-pill " placeholder="email" aria-label="email" required >
+  </div>
+
+<br>
+
+<div class="input-group mb-3">
+  <!-- <span class="input-group-text" id="basic-addon1"><i class="icofont-ui-email"></i></span> -->
+  <input type="password" name="pw" class="form-control rounded-pill " placeholder="*****" aria-label="******" required>
+</div>
+
+<p style="text-align: center;" class="text-light">New User??
+  <a href="{% url 'reg' %}"
+target="_blank" class="ab"><span class="a">create account</span></a></p>
+
+
+<br>
+
+<center>
+   <button type="submit" class="btn btn-warning">login</button>
+   </center>
+
+  </form>
+ 
+ </div>
+ <div class="col-1"></div>
+ </div>
+</body>
+</html>
+
+{% endblock %}

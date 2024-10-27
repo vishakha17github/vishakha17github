@@ -1,0 +1,184 @@
+{% extends 'sidebar.html' %}
+{% block content%}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <center>
+
+        <body>
+            <h1> personal info</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 mt-4">
+                        {% if msg == 'success' %}
+                        <img src="{{user.profile.url}}" class="" height="200px" width="200px"
+                            style="border: none; border-radius: 0%;">
+                            {% endif %}
+                            <form method="POST" action="" enctype="multipart/form-data" class=" p-5 mt-5 shadow-lg">
+                                {% csrf_token %}
+                        <input type="file" id="file" name="file1" class="mt-5">
+
+                        <div id="file-selected-message" style="display: none;margin-left:150px; ">
+                            <p style="padding-top:20px;">File selected:&nbsp; <span id="file-name"></span></p>
+                        </div>
+<br>
+                        <button type="submit" class="mt-2 mb-5 ps-5 pe-5 pt-2 pb-2 ">UPLOAD</button>
+
+                        
+                    </div>
+                    <div class="col-6 mt-4">
+                        <div class="row">
+                            <div class="col-6 ">
+                                <p>Name: </p>
+                                <p>Age: </p>
+                                <p>Pincode: </p>
+                                <p>Contact No: </p>
+                                <p>Address: </p>
+                                <p>DOB: </p>
+                              
+                            </div>
+
+                            <!-- <h1 class=" text-center display-1 text-light" style="color: #d88730;">{{user.name}}</h1> -->
+
+
+                            <div class="col-6 ">
+
+
+                                <p>{{user.name}}</p>
+                                <p>{{user.email}}</p>
+                                <p>{{user.pincode}}</p>
+                                <p>{{user.Contact}}</p>
+                                <p>{{user.address}}</p>
+                                <p>{{user.dob}}</p>
+                                <p>{{user.phone}}</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="container mt-5">
+                <div class="b1">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10 b1">
+                            <div class="row mt-5">
+                                <div class="col-6 text-center">
+                                    {% if msg == 'success' %}
+                                    <img src="{{user.profile.url}}" class="" height="200px" width="200px"
+                                        style="border: none; border-radius: 0%;">
+                                    {% endif %}
+                                </div>
+                                <div class="col-6">
+                                    <h1 class="mb-4  text-center display-1" style="color: #d88730;">{{user.Name}}</h1>
+                                </div>
+                                <form method="POST" action="" enctype="multipart/form-data" class="b1 p-5 mt-5 shadow-lg">
+                                    {% csrf_token %}
+        
+                                    <input type="file" id="file" name="file1" class="mt-5">
+        
+                                    <div id="file-selected-message" style="display: none;margin-left:150px; ">
+                                        <p style="padding-top:20px;">File selected:&nbsp; <span id="file-name"></span></p>
+                                    </div>
+        
+                                    <button type="submit" class="mt-2 mb-5 ps-5 pe-5 pt-2 pb-2 bg-primary text-light"
+                                        style="margin-left:100px;">UPLOAD</button>
+                                </form>
+        
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-5" style="color: white;">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10 mb-5">
+                            <div class="row">
+                                <h1 class="mb-4  text-center" style="color: #d88730;">Personal Information</h1>
+                                <div class="col-6 mt-4">
+        
+                                    <p>Name: </p>
+                                    <p>Age: </p>
+                                    <p>Pincode: </p>
+                                    <p>Contact No: </p>
+                                    <p>Address: </p>
+                                    <p>DOB: </p>
+                                    <p>Gender: </p>
+                                </div>
+                                <div class="col-6 mt-4 ">
+                                    <p>{{user.Name}}</p>
+                                    <p>{{user.Age}}</p>
+                                    <p>{{user.Pincode}}</p>
+                                    <p>{{user.Contact}}</p>
+                                    <p>{{user.Address}}</p>
+                                    <p>{{user.DOB}}</p>
+                                    <p>{{user.Gender}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+
+
+            <!-- <p>Name: {{user.name}}</p>
+    <p>Email: {{user.email}}</p> -->
+    </center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+{% endblock %}

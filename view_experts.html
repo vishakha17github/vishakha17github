@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- 
+<div style="background-image: url({%static 'images/background.jpg'  %}); background-size: cover;">
+  <div style="background:rgba(0, 0, 0, 0.75)" <div class="row  text-light p-5 " ></div> -->
+ <div style="background-image: url({%static 'images/background.jpg'  %}); background-size: cover;">
+    <div style="background:rgba(0, 0, 0, 0.75)"
+    <div class="row  text-light p-5 " height="110%" > 
+    
+
+
+
+
+
+<div class="container">
+    <div class="row">
+    {%  for i in data %}
+
+        <div class="col-4 mt-4 pr-5" data-aos="zoom-in"w2po;o76>
+              <div class="card h-70 " style="width: 18rem;">
+              <img src="{{i.image.url}}" class="card-img-top" alt="error" height="240px" width="240px">
+              <div class="card-body">
+                <h4 class="card-name"><b>{{i.name|truncatechars:20}}</b></h4>
+                <p class="card-text"><i>{{i.contact|truncatechars:20}}</i></p>
+                <h6 class="card-email">{{i.email|truncatechars:1000}}</h6>
+                <p class="card-description">{{i.description|truncatechars:1000}}</p>
+               
+                <!-- <a href="#" class="btn btn-primary">View More</a>  -->
+
+              </div>
+              </div>
+              </div>
+              {% endfor %} 
+        </div>
+    </div>
+</div> 
+</div>
+
+
+{% endblock %}
+

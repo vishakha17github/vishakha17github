@@ -1,0 +1,116 @@
+{% extends 'sidebar.html' %}
+{% load static %}
+{% block content%}
+
+<html>
+    <head>
+        <title>bitcoin  </title>
+        <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{%static 'icofont/icofont.min.css ' %}" rel="stylesheet">
+    </head>
+
+    <body>
+      <center><h1><b>Bitcoin </b></h1></center>
+        <div style="background-image: url({%static 'images/background.jpg'  %}); background-size: cover;">
+            <div style="background:rgba(0, 0, 0, 0.75)"
+            <div class="row  text-light p-5 " >
+        <center>
+           
+        <div clas="container">
+            <div class="row">
+             
+                <div class="col-4 ">
+                    <div class="card h-100" style="width: 18rem;" , height="160px",  width="120px">
+                        <img src= {%static "images/copi.gif" %} class="card-img-top" >
+                        <div class="card-body">
+                          <h5 class="card-title">Bitcoin Open Price</h5>
+                           
+                           <a href="{% url 'bitcoinopenprice' %}" class="btn btn-primary">view analysis</a> 
+                        </div>
+                      </div>
+
+
+                </div>
+
+
+                <div class="col-4 ">
+                    <div class="card h-100" style="width: 18rem;" >
+                        <img src= {%static "images/kil.gif" %}   class="card-img-top" alt="..." height="210px" width="210px">
+                        <div class="card-body">
+                          <h5 class="card-title">Bitcoin Low Price</h5>
+                      
+                          <a href="{% url 'bitcoinlowprice' %}" class="btn btn-primary">view analysis</a> 
+                        </div>
+                      </div>
+                </div>
+
+<div class="col-4 ">
+
+    <div class="card h-100" style="width: 18rem;">
+        <img src= {%static "images/bii.gif" %}  class="card-img-top" alt="..." height="210px" width="160px">
+        <div class="card-body">
+          <h5 class="card-title">Bitcoin Close Price</h5>
+         
+         
+       <a href="{% url 'bitcoincloseprice' %}" class="btn btn-primary">view analysis</a> 
+        </div>
+      </div>
+</div>
+
+
+
+
+            </div>
+         </div>           
+
+
+</center>
+<center>
+    <div clas="container">
+        <div class="row">
+            <div class="col-6 mt-4 p-4">
+                <div class="card h-100"style="width: 18rem;" >
+                    <img src= {%static "images/pii.gif" %} class="card-img-top" height="210px" width="120px" >
+                    <div class="card-body">
+                      <h5 class="card-title">Bitcoin.Adj Close Price</h5>
+                       
+                       <a href="{% url 'adjprice' %}" class="btn btn-primary">view analysis</a> 
+                    </div>
+                  </div>
+
+
+            </div>
+
+
+            <div class="col-3 mt-4 p-4">
+                <div class="card h-100" style="width: 18rem;" >
+                    <img src= {%static "images/mi.gif" %}   class="card-img-top" alt="..." height="210px" width="120px">
+                    <div class="card-body">
+                      <h5 class="card-title">Bitcoin Volume</h5>
+                  
+                      <a href="{% url 'bitcoinvolume' %}" class="btn btn-primary">view analysis</a> 
+                    </div>
+                  </div>
+            </div>
+        
+
+
+
+
+
+
+        </div></div>
+    </div>
+     
+     </center> 
+  </body>
+  </html>
+
+
+
+
+
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,86 @@
+{% extends 'sidebar.html' %}
+{% load static %}
+{% block content%}
+
+<html>
+    <head>
+        <title>doge Open Price</title>
+        <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{%static 'icofont/icofont.min.css ' %}" rel="stylesheet">
+    </head>
+
+    <body>
+
+        
+        <center>
+            <h1 >Doge Open Price</h1>
+        <div clas="container">
+            <div class="row">
+                <div class="col-4 mt-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src= {%static "images/low.jpg" %} class="card-img-top" >
+                        <div class="card-body">
+                          <h5 class="card-title">Open price for a particular year</h5>
+                         
+                           <a href="{% url 'dopenoneyear' %}" class="btn btn-outline-primary">view analysis</a> 
+                        </div>
+                      </div>
+
+
+                </div>
+
+
+                <div class="col-4 mt-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src= {%static "images/pic2.png" %}   class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Open price for a range of years</h5>
+                      
+                          <a href="{% url 'dopentwoyear' %}" class="btn btn-outline-primary">view analysis</a> 
+                        </div>
+                      </div>
+                </div>
+
+<div class="col-4 mt-4">
+
+    <div class="card" style="width: 18rem;">
+        <img src= {%static "images/hy.png" %}  class="card-img-top" alt="..." height="216px">
+        <div class="card-body">
+          <h5 class="card-title">Open price for candle graph</h5>
+         
+         
+       <a href="{% url 'dopencandleyear' %}" class="btn btn-outline-primary">view analysis</a> 
+        </div>
+      </div>
+</div>
+
+
+
+
+            </div>
+         </div>           
+
+
+</center>
+
+           
+
+
+
+
+
+
+
+        </div>
+     </div>           
+
+
+</center>
+
+
+
+
+
+
+
+{% endblock %}

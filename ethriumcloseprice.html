@@ -1,0 +1,86 @@
+{% extends 'sidebar.html' %}
+{% load static %}
+{% block content%}
+
+<html>
+    <head>
+        <title>ethruim close Price</title>
+        <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{%static 'icofont/icofont.min.css ' %}" rel="stylesheet">
+    </head>
+
+    <body>
+
+        
+        <center>
+            <h1 >Ethrium Close Price</h1>
+        <div clas="container">
+            <div class="row">
+                <div class="col-4 mt-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src= {%static "images/ethrium1.png" %} class="card-img-top" height="160px" >
+                        <div class="card-body">
+                          <h5 class="card-title">Close Price For Particular Year</h5>
+                         
+                           <a href="{% url 'ecloseoneyear' %}" class="btn btn-outline-primary">view analysis</a> 
+                        </div>
+                      </div>
+
+
+                </div>
+
+
+                <div class="col-4 mt-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src= {%static "images/ethrium2.jpg" %}   class="card-img-top" alt="..." height="160px">
+                        <div class="card-body">
+                          <h5 class="card-title">Close Price For Range Of Years</h5>
+                      
+                          <a href="{% url 'eclosetwoyear' %}" class="btn btn-outline-primary">view analysis</a> 
+                        </div>
+                      </div>
+                </div>
+
+<div class="col-4 mt-4">
+
+    <div class="card" style="width: 18rem;">
+        <img src= {%static "images/ethrium3.png" %}  class="card-img-top" alt="..." height="160px">
+        <div class="card-body">
+          <h5 class="card-title">Close Price For Candle Year</h5>
+         
+         
+       <a href="{% url 'eclosecandleyear' %}" class="btn btn-outline-primary">view analysis</a> 
+        </div>
+      </div>
+</div>
+
+
+
+
+            </div>
+         </div>           
+
+
+</center>
+
+           
+
+
+
+
+
+
+
+        </div>
+     </div>           
+
+
+</center>
+
+
+
+
+
+
+
+{% endblock %}
